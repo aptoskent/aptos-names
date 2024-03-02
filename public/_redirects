@@ -1,0 +1,22 @@
+/api/testnet/v1/address/*   https://aptos-names-api-a4ocin5yba-uw.a.run.app/v1/address/:splat   200
+/api/testnet/v1/name/*   https://aptos-names-api-a4ocin5yba-uw.a.run.app/v1/name/:splat   200
+/api/testnet/v1/metadata/*   https://aptos-names-api-a4ocin5yba-uw.a.run.app/v1/metadata/:splat   200
+/api/testnet/v1/image/*   https://aptos-names-api-a4ocin5yba-uw.a.run.app/v1/image/:splat   200
+/api/testnet/v1/verify   https://aptos-names-api-a4ocin5yba-uw.a.run.app/v1/verify   200
+/api/testnet/v1/primary-name/*   https://aptos-names-api-a4ocin5yba-uw.a.run.app/v1/primary-name/:splat   200
+
+/api/mainnet/v1/address/*   https://aptos-names-api-u6smh7xtla-uw.a.run.app/v1/address/:splat   200
+/api/mainnet/v1/name/*   https://aptos-names-api-u6smh7xtla-uw.a.run.app/v1/name/:splat   200
+/api/mainnet/v1/metadata/*   https://aptos-names-api-u6smh7xtla-uw.a.run.app/v1/metadata/:splat   200
+/api/mainnet/v1/image/*   https://aptos-names-api-u6smh7xtla-uw.a.run.app/v1/image/:splat   200
+/api/mainnet/v1/verify   https://aptos-names-api-u6smh7xtla-uw.a.run.app/v1/verify   200
+/api/mainnet/v1/primary-name/*   https://aptos-names-api-u6smh7xtla-uw.a.run.app/v1/primary-name/:splat   200
+
+/api/v1/address/*   https://aptos-names-api-u6smh7xtla-uw.a.run.app/v1/address/:splat   200
+/api/v1/name/*   https://aptos-names-api-u6smh7xtla-uw.a.run.app/v1/name/:splat   200
+/api/v1/metadata/*   https://aptos-names-api-u6smh7xtla-uw.a.run.app/v1/metadata/:splat   200
+/api/v1/image/*   https://aptos-names-api-u6smh7xtla-uw.a.run.app/v1/image/:splat   200
+/api/v1/verify   https://aptos-names-api-u6smh7xtla-uw.a.run.app/v1/verify   200
+/api/v1/primary-name/*   https://aptos-names-api-u6smh7xtla-uw.a.run.app/v1/primary-name/:splat   200
+
+/*    /index.html   200

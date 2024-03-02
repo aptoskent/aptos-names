@@ -1,0 +1,90 @@
+openapi: 3.0.3
+info:
+  title: Aptos Names API
+  description: >
+    The Aptos Names API is a RESTful API for client applications to interact with the Aptos Names Service.
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 0.0.1
+  contact:
+    name: Aptos
+    url: https://github.com/aptos-labs/aptos-core
+paths:
+  /address/{name}:
+    get:
+      description: "Returns the address associated to a name"
+      operationId: getAddressFromName
+      parameters:
+        - name: "name"
+          in: path
+          required: true
+          schema:
+            $ref: "#/components/schemas/AptosName"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccountAddress"
+  /name/{address}:
+    get:
+      description: "Returns the primary name associated to an address"
+      operationId: getNameFromAddress
+      parameters:
+        - name: "address"
+          in: path
+          required: true
+          schema:
+            $ref: "#/components/schemas/AccountAddress"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AptosName"
+components:
+  parameters:
+    AptosName:
+      name: name
+      in: path
+      required: true
+      schema:
+        $ref: '#/components/schemas/AptosName'
+    AccountAddress:
+      name: address
+      in: path
+      required: true
+      schema:
+        $ref: '#/components/schemas/AccountAddress'
+  responses:
+    "400":
+      description: |
+        Bad request due to a client error: invalid request headers, parameters or body.
+        Client should not retry the request without modification.
+    "404":
+      description: |
+        Resource or data not found.
+    "500":
+      description: |
+        Server internal error, caused by unexpected issues.
+  schemas:
+    AccountAddress:
+      title: Account address
+      type: string
+      format: address
+      description: |
+        Hex-encoded 16 bytes Aptos account address.
+
+        Prefixed with `0x` and leading zeros are trimmed.
+
+        See [doc](https://diem.github.io/move/address.html) for more details.
+      example: "0xdd"
+    AptosName:
+      title: Aptos name
+      type: string
+      description: |
+        Aptos name ending with .apt suffix
+      example: "john-smith.apt"

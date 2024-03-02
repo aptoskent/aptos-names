@@ -1,1 +1,1 @@
-# aptos-names
+# Aptos Name Service

@@ -1,0 +1,12 @@
+query getCurrentAddressFromName($subdomain: String!, $domain: String!) {
+  current_ans_lookup(where: {subdomain: {_eq: $subdomain}, _and: {domain: {_eq: $domain}}}) {
+    registered_address
+  }
+}
+
+query getCurrentNameFromAddress($address: String!) {
+  current_ans_lookup(where: {registered_address: {_eq: $address}}) {
+    domain
+    subdomain
+  }
+}
